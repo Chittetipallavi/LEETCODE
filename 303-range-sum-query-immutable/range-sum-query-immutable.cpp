@@ -1,5 +1,6 @@
 class NumArray {
 public:
+vector<int>nums;
 vector<int>ans;
     NumArray(vector<int>& nums) {
         int sum=nums[0];
