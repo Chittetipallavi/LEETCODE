@@ -28,18 +28,18 @@ public:
         prev=curr;
         curr=next;
        }
-       slow=prev;
-       ListNode* temp=head;
-       while(slow!=NULL && temp!=slow)
+       ListNode* right=prev;
+       ListNode* left=head;
+       while(right!=NULL)
        {
-        if(slow->val!=temp->val)
+        if(left->val!=right->val)
         {
             return false;
         }
         else
         {
-            slow=slow->next;
-            temp=temp->next;
+            left=left->next;
+            right=right->next;
         }
        }
        return true;
